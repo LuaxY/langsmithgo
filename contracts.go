@@ -69,6 +69,7 @@ type PostPayload struct {
 }
 
 type PatchPayload struct {
+	Inputs  map[string]interface{} `json:"inputs"`
 	Outputs map[string]interface{} `json:"outputs"`
 	EndTime time.Time              `json:"end_time"`
 	Events  []Event                `json:"events,omitempty"`

@@ -66,6 +66,7 @@ func (c *Client) PostRun(input *RunPayload) error {
 
 func (c *Client) PatchRun(id string, input *RunPayload) error {
 	payload := PatchPayload{
+		Inputs:  input.Inputs,
 		Outputs: input.Outputs,
 		EndTime: time.Now().UTC(),
 		Events:  input.Events,
